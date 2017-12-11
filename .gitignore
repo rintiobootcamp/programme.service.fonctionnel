@@ -1,0 +1,5 @@
+target/
+.idea
+logs
+/src/main/resources/local/
+nb-configuration.xml
