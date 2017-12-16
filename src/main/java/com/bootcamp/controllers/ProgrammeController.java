@@ -44,6 +44,12 @@ public class ProgrammeController {
     @Autowired
     HttpServletRequest request;
 
+    /**
+     * Get all the programs in the database
+     *
+     * @return programs list
+     * @throws SQLException
+     */
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get list of programs", notes = "Get list of programs")
@@ -53,7 +59,13 @@ public class ProgrammeController {
         httpStatus = HttpStatus.OK;
         return new ResponseEntity<List<Programme>>(programmes, httpStatus);
     }
-    
+
+    /**
+     * Insert the given program in the database
+     *
+     * @param programme
+     * @return programme
+     */
     @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Create a new programm", notes = "Create a new programm")
@@ -68,22 +80,38 @@ public class ProgrammeController {
         }
         return new ResponseEntity<Programme>(programme, httpStatus);
     }
-    
+
+    /**
+     * Update the given program in the database
+     *
+     * @param programme
+     * @return program id
+     * @throws Exception
+     */
     @RequestMapping(method = RequestMethod.PUT)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Update a projet", notes = "update a projet")
     public ResponseEntity<Integer> update(@RequestBody @Valid Programme programme) throws Exception {
-        int done =  programmeService.update(programme);
+        int done = programmeService.update(programme);
         return new ResponseEntity<>(done, HttpStatus.OK);
     }
-    
+
+    /**
+     * Delete a program in the database by its id
+     *
+     * @param id
+     * @return program id
+     * @throws Exception
+     * @throws IllegalAccessException
+     * @throws DatabaseException
+     * @throws InvocationTargetException
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "delete programm", notes = "delete a programm")
     public ResponseEntity<Integer> delete(@PathVariable int id) throws Exception, IllegalAccessException, DatabaseException, InvocationTargetException {
         if (programmeService.exist(id));
         boolean done = programmeService.delete(id);
-        return new ResponseEntity (done, HttpStatus.OK);
+        return new ResponseEntity(done, HttpStatus.OK);
     }
-
 }
