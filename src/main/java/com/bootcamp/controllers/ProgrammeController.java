@@ -109,9 +109,27 @@ public class ProgrammeController {
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "delete programm", notes = "delete a programm")
-    public ResponseEntity<Integer> delete(@PathVariable int id) throws Exception, IllegalAccessException, DatabaseException, InvocationTargetException {
+    public ResponseEntity<Boolean> delete(@PathVariable int id) throws Exception, IllegalAccessException, DatabaseException, InvocationTargetException {
         if (programmeService.exist(id));
         boolean done = programmeService.delete(id);
-        return new ResponseEntity(done, HttpStatus.OK);
+        return new ResponseEntity<>(done, HttpStatus.OK);
+    }
+
+    /**
+     * Get  a program in the database by its id
+     *
+     * @param id
+     * @return program id
+     * @throws Exception
+     * @throws IllegalAccessException
+     * @throws DatabaseException
+     * @throws InvocationTargetException
+     */
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ApiVersions({"1.0"})
+    @ApiOperation(value = "delete programm", notes = "delete a programm")
+    public ResponseEntity<Programme> getById(@PathVariable int id) throws Exception, IllegalAccessException, DatabaseException, InvocationTargetException {
+        Programme programme = programmeService.read(id);
+        return new ResponseEntity<>(programme, HttpStatus.OK);
     }
 }
