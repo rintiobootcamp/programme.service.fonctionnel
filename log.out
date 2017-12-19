@@ -1,5 +1,5 @@
 [INFO] Scanning for projects...
-[INFO]                                                                         
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] Building programme.service.fonctionnel 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
@@ -8,8 +8,8 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ programme.service.fonctionnel ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /home/soul/bootcamp/Review Release_1.3.0/clone/programme.service.fonctionnel/src/main/resources
-[INFO] Copying 23 resources
+[INFO] skip non existing resourceDirectory /Bootcamp/Clone/programme.service.fonctionnel/src/main/resources
+[INFO] Copying 21 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ programme.service.fonctionnel ---
 [INFO] Nothing to compile - all classes are up to date
@@ -23,15 +23,19 @@
 [INFO] 
 [INFO] <<< spring-boot-maven-plugin:1.5.3.RELEASE:run (default-cli) < test-compile @ programme.service.fonctionnel <<<
 [INFO] 
+[INFO] 
 [INFO] --- spring-boot-maven-plugin:1.5.3.RELEASE:run (default-cli) @ programme.service.fonctionnel ---
+2017-12-19 13:40:25,641 main ERROR appenders contains an invalid element or attribute "Sentry"
+2017-12-19 13:40:25,694 main ERROR Unable to locate appender "Sentry" for logger config "org.springframework"
+2017-12-19 13:40:25,702 main ERROR Unable to locate appender "Sentry" for logger config "com.bootcamp"
 SLF4J: Class path contains multiple SLF4J bindings.
-SLF4J: Found binding in [jar:file:/home/soul/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: Found binding in [jar:file:/home/soul/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.7/log4j-slf4j-impl-2.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.7/log4j-slf4j-impl-2.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/root/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
-SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-log4j:WARN No appenders could be found for logger (org.springframework.web.context.support.StandardServletEnvironment).
-log4j:WARN Please initialize the log4j system properly.
-log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2017-12-19 13:40:27,946 main ERROR appenders contains an invalid element or attribute "Sentry"
+2017-12-19 13:40:27,972 main ERROR Unable to locate appender "Sentry" for logger config "org.springframework"
+2017-12-19 13:40:27,977 main ERROR Unable to locate appender "Sentry" for logger config "com.bootcamp"
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -41,5 +45,38 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.8.RELEASE)
 
-[32m2017-12-19 00:29:36.215 WAT [background-preinit] o.h.v.i.u.Version INFO : HV000001: Hibernate Validator 5.3.5.Final
-[m
+2017-12-19 13:40:30.956 WAT [background-preinit] o.h.v.i.u.Version INFO : HV000001: Hibernate Validator 5.3.5.Final
+2017-12-19 13:40:43.387 WAT [main] o.a.c.c.StandardService INFO : Starting service [Tomcat]
+2017-12-19 13:40:43.401 WAT [main] o.a.c.c.StandardEngine INFO : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-19 13:40:44.022 WAT [localhost-startStop-1] o.a.c.c.C.[.[.[/programme] INFO : Initializing Spring embedded WebApplicationContext
+2017-12-19 13:40:58.318 WAT [main] s.d.s.w.p.DocumentationPluginsBootstrapper INFO : Context refreshed
+2017-12-19 13:40:58.648 WAT [main] s.d.s.w.p.DocumentationPluginsBootstrapper INFO : Found 1 custom documentation plugin(s)
+2017-12-19 13:40:58.728 WAT [main] s.d.s.w.s.ApiListingReferenceScanner INFO : Scanning for api listing references
+2017-12-19 13:41:00.462 WAT [main] o.a.c.h.Http11NioProtocol INFO : Initializing ProtocolHandler ["http-nio-8091"]
+2017-12-19 13:41:00.664 WAT [main] o.a.c.h.Http11NioProtocol INFO : Starting ProtocolHandler ["http-nio-8091"]
+2017-12-19 13:41:00.774 WAT [main] o.a.t.u.n.NioSelectorPool INFO : Using a shared selector for servlet write/read
+2017-12-19 13:41:24.925 WAT [http-nio-8091-exec-2] o.a.c.c.C.[.[.[/programme] INFO : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-19 13:41:25.318 WAT [http-nio-8091-exec-2] o.t.TemplateEngine INFO : [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-12-19 13:41:25.672 WAT [http-nio-8091-exec-2] o.t.t.AbstractTemplateResolver INFO : [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
+2017-12-19 13:41:25.673 WAT [http-nio-8091-exec-2] o.t.t.AbstractTemplateResolver INFO : [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-12-19 13:41:25.673 WAT [http-nio-8091-exec-2] o.t.m.AbstractMessageResolver INFO : [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-12-19 13:41:25.673 WAT [http-nio-8091-exec-2] o.t.m.AbstractMessageResolver INFO : [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-12-19 13:41:25.681 WAT [http-nio-8091-exec-2] o.t.T.CONFIG INFO : [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-12-19 13:41:25.688 WAT [http-nio-8091-exec-2] o.t.TemplateEngine INFO : [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+[EL Info]: 2017-12-19 13:41:38.306--ServerSession(933791678)--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+[EL Info]: connection: 2017-12-19 13:41:40.016--ServerSession(933791678)--file:/root/.m2/repository/com/bootcamp/db-access/1.0-SNAPSHOT/db-access-1.0-SNAPSHOT.jar_databasePU login successful
