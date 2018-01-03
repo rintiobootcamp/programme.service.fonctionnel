@@ -3,6 +3,6 @@ target/
 logs
 /src/main/resources/local/
 nb-configuration.xml
-*.iml
-*.out
+programme.service.fonctionnel.iml
+log.out
 logs
